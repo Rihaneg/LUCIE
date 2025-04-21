@@ -257,7 +257,17 @@
       display: flex;
       align-items: center;
     }
-    
+    .media-item iframe {
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.media-item iframe:hover {
+  transform: scale(1.03);
+}
     .urgency-banner::before {
       content: "⚠️";
       margin-right: 10px;
@@ -298,26 +308,17 @@
       <p>C'était en Fevrier et mars derniers. Ma vie a basculé. Brutalement.</p>
       
       <h3>Vidéos</h3>
-      <div class="media-container">
-        <div class="media-item">
-          <video controls poster="https://www.youtube.com/watch?v=6GE1cq01jNk">
-            <source src="#" type="video/mp4">
-            Votre navigateur ne supporte pas les vidéos.
-          </video>
-        </div>
-        <div class="media-item">
-          <video controls poster="https://www.youtube.com/watch?v=xh4k7gHPE1w&t=20s">
-            <source src="#" type="video/mp4">
-            Votre navigateur ne supporte pas les vidéos.
-          </video>
-        </div>
-        <div class="media-item">
-          <video controls poster="https://www.youtube.com/watch?v=XW-rhlo1_YI&t=8s">
-            <source src="#" type="video/mp4">
-            Votre navigateur ne supporte pas les vidéos.
-          </video>
-        </div>
-      </div>
+<div class="media-container">
+  <div class="media-item">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/6GE1cq01jNk?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="media-item">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xh4k7gHPE1w?start=20&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="media-item">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/XW-rhlo1_YI?start=8&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
       
       <h3>Photos</h3>
       <div class="media-container">
